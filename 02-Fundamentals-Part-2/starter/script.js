@@ -61,17 +61,41 @@ Arrow functions are a special form of function expression
 // Arrow function
 // arrow functions do not get this keywords. 
 // this will return without writing the return keyword. this only works with one liner functions.
-const calcAge3 = birthYear => 2037 - birthYear;
-const age3 = calcAge3(1991);
-console.log(age3);
+// const calcAge3 = birthYear => 2037 - birthYear;
+// const age3 = calcAge3(1991);
+// console.log(age3);
 
-// so here we need to use the return word to access the retirement variable. 
-const yearsUntilRetiremet = (birthYear, firstName) => {
-    const age = 2037 - birthYear;
-    const retiremet = 65 - age;
-    // return retiremet;
-    return `${firstName} retires in ${retiremet} years`
-}
+// // so here we need to use the return word to access the retirement variable. 
+// const yearsUntilRetiremet = (birthYear, firstName) => {
+//     const age = 2037 - birthYear;
+//     const retiremet = 65 - age;
+//     // return retiremet;
+//     return `${firstName} retires in ${retiremet} years`
+// }
 
-console.log(yearsUntilRetiremet(1991, 'Matt'));
-console.log(yearsUntilRetiremet(1980, 'Bob'));
+// console.log(yearsUntilRetiremet(1991, 'Matt'));
+// console.log(yearsUntilRetiremet(1980, 'Bob'));
+
+/******************************** 
+Lecture 36. Functions calling other functions
+
+*/
+
+// function cutFruitPieces(fruit){
+//     return fruit * 4;
+// };
+// function fruitProcessor(apples, oranges){
+//     const applePieces = cutFruitPieces(apples);
+//     const orangePieces = cutFruitPieces(oranges);
+
+//     const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces orange.`;
+//     return juice;
+// };
+
+// console.log(fruitProcessor(2, 3));
+
+/******************************** 
+Lecture 37. Function review
+
+*/
+
