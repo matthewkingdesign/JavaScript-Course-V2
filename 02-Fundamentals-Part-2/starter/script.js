@@ -297,28 +297,64 @@ Lecture 42. Introduction to Objects
 Lecture 43. Dot vs. Bracket Notation
 
 */
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     age: 2037 - 1991,
+//     job: 'Teacher',
+//     friends: ['Michael', 'Peter', 'Steven']
+// };
+// console.log(jonas);
+// // Dot notation
+// console.log(jonas.lastName);
+// // Bracket notation
+// // Here we can write an expression
+// console.log(jonas['lastName']);
+
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
+
+// // when we need to compute the value we need bracket notation. Otherwise use the dot notation.
+
+// const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends.');
+
+// console.log(interestedIn);
+
+// console.log(jonas[interestedIn]);
+
+// if(jonas[interestedIn]){
+//     console.log(jonas[interestedIn]);
+// } else {
+//     console.log('Wrong request! Choose between firstName, lastName, age, job and friends.')
+// }
+
+// jonas.location = 'Portugal';
+// jonas['twitter'] = '@jonasschmedtman'
+
+// //Challenge
+// //"Jonas has 3 friends and his best friend is called Micheal"
+
+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends  and his best friend is called ${jonas.friends[0]}`);
+
+/******************************** 
+Lecture 44. Object Mothods
+
+*/
+// funtions are just another type of value.
+// Adding a function to an object.
+
 const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
-    age: 2037 - 1991,
+    birthYear: 1991,
     job: 'Teacher',
-    friends: ['Michael', 'Peter', 'Steven']
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicence: true,
+
+    calcAge: function (birthYear) {
+        return 2037 - birthYear;
+    }
 };
-console.log(jonas);
-// Dot notation
-console.log(jonas.lastName);
-// Bracket notation
-// Here we can write an expression
-console.log(jonas['lastName']);
-
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
-
-// when we need to computed the value we need bracket notation. Otherwise use the dot notation.
-
-const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends.');
-
-console.log(interestedIn);
-
-console.log(jonas[interestedIn]);
+console.log(jonas.calcAge(1991));
+console.log(jonas.calcAge(1991));
