@@ -23,3 +23,4 @@ const calcAge = birthYear => 2037 - birthYear;
 console.log(x);
 // IMPORTANT
 console.log(calcAge(1991));
+console.log(calcAge(1970));
