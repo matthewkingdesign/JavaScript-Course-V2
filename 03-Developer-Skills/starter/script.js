@@ -43,3 +43,61 @@ console.log(multiply(12, 2));
 // We work for a company building a smart home thermometer. Our most recent task is this: "Given an array of temperatures of one day, calculate the temperature amplitude. Keep in mind that sometimes there might be a sensor error."
 
 const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+
+//1. Understanding the problem
+// what is the temperature amplitude?
+// - It is the difference between the highest and lowest temp
+
+// Whats a sensor error? And what do we do?
+
+// How do we compute the max and min temps?
+
+//2. Sub problems
+// Ignore sensor errors, How do we do this?
+// Find max value in temp array
+// Find min value in temp array
+// Subtract min from max and return it - amplitutde.
+
+const calcTempAmplitude = function (temps) {
+  let max = temps[0];
+  let min = temps[0];
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== 'number') continue;
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+calcTempAmplitude([3, 7, 4, 8, 12]);
+const amplitude = calcTempAmplitude(temperatures);
+console.log(amplitude);
+
+// PROBLEM 2:
+// Function should now receive 2 arrays of temps
+// 1. Understand the problem
+// With 2 arrays, should we implement functionality?
+// No Just merge the arrays
+
+//2. sub problems
+// How do we merge the arrays?
+const calcTempAmplitudeNew = function (t1, t2) {
+  const temps = t1.concat(t2);
+  console.log(temps);
+
+  let max = temps[0];
+  let min = temps[0];
+
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== 'number') continue;
+
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
+console.log(amplitudeNew);
